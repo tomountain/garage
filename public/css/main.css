@@ -1,0 +1,13 @@
+#map {
+    width: 50%;
+    height: 50%;
+}
+
+@font-face{
+    font-family: 'HanaM';
+    src: url(./HanaM.ttf) format('truetype');
+}
+
+body{
+    font-family: HanaM
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="//unpkg.com/bootstrap@4/dist/css/bootstrap.min.css">
+    <script src='//unpkg.com/jquery@3/dist/jquery.min.js'></script>
+    <script src='//unpkg.com/popper.js@1/dist/umd/popper.min.js'></script>
+    <script src='//unpkg.com/bootstrap@4/dist/js/bootstrap.min.js'></script>
+    <link rel="stylesheet" href="../css/main.css" type="text/css" />
+    <script>
+            Demo={}
+    </script>
+</head>
+
+<body>
+    <!-- CI Content-->
+    <div class="col" style="margin-left: 100px; margin-top: 50px; margin-bottom: 50px;">
+        <img src="../img/h1_logo_kebhana.png" class="img-responsive" alt="">
+    </div>
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row justify-content-center">
+            <span style="font-family: HanaM; color: rgb(26,188,156)">
+                <h2>수익율 투입 하기</h2>
+            </span>
+        </div>
+        <div class="row justify-content-center">
+            <span style="font-family: HanaM; color: rgb(231, 76, 60)">
+                <h2>원하는 수익율을 입력하세요.</h2>
+            </span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <input id="inputRate" type="text" value="희망 수익율을 입력하세요(예. 12.30%)" style="color: rgb(94,94,94);">
+        </div>
+    </div>
+
+    <!-- Button Content-->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btn btn-outline-secondary btn-lg" >
+                    <a href="./prototype.html">이전</a>
+                </button>
+            </div>
+            <div class="col-6">
+
+            </div>
+            <div class="col">
+                <button type="button" value="다음" class="btn btn-lg btn-outline-primary" onclick="clickBtn();">
+                    다음
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 버튼을 클릭하면 inputRate의 값을 getRate로 받아 localStorage에 저장, key는 rate
+        function clickBtn() {   
+            const getRate = document.getElementById('inputRate').value;
+            localStorage.setItem("rate", getRate);
+
+            // 여기서 다음 페이지로 이동
+            location.href= "../pages/prototype3.html"
+            
+        }
+    </script>
+</body>
+
+</html>

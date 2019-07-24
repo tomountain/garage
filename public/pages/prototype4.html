@@ -1,0 +1,188 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="//unpkg.com/bootstrap@4/dist/css/bootstrap.min.css">
+    <script src='//unpkg.com/jquery@3/dist/jquery.min.js'></script>
+    <script src='//unpkg.com/popper.js@1/dist/umd/popper.min.js'></script>
+    <script src='//unpkg.com/bootstrap@4/dist/js/bootstrap.min.js'></script>
+    <link rel="stylesheet" href="../css/main.css" type="text/css" />
+    <script>
+        //Demo = {}
+    </script>
+</head>
+
+<body>
+    <!-- CI Content-->
+    <div class="col" style="margin-left: 100px; margin-top: 50px; margin-bottom: 50px;">
+        <img src="../img/h1_logo_kebhana.png" class="img-responsive" alt="">
+    </div>
+
+    <!-- Page Content -->
+    <div class="container" style="color:#00a499">
+        <blockquote class="blockquote text-center">
+            <p class="h2">고객님의 투자 성향을 분석하여 더 자세히 추천드릴게요</p>
+        </blockquote>
+    </div>
+    <p></p> 
+    <p></p>
+    <p></p>
+
+    <!-- 그림 위치 확인할 것 -->
+    <div class="container">
+        <div class="row">
+            <div class="col"> 
+                <div class="col-5 dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" style="width: 226px;"
+                        id="age" data-toggle="dropdown" area-haspopup="true" aria-expanded="undefined">
+                        나이
+                    </button>
+                    <!-- value 값 추가, 나중에 확인할 것 -->
+                    <div class="dropdown-menu" id="ageMenu">
+                        <a class="dropdown-item" value="20대"> 20대 </a>
+                        <a class="dropdown-item" value="30대"> 30대 </a>
+                        <a class="dropdown-item" value="40대"> 40대 </a>
+                        <a class="dropdown-item" value="50대"> 50대 </a>
+                        <a class="dropdown-item" value="60대"> 60대 </a>
+                    </div>
+                </div>
+                <p></p>
+                <div class="col-5 dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" style="width: 226px;"
+                        id="job" data-toggle="dropdown" area-haspopup="true" aria-expanded="undefined">
+                        직업군
+                    </button>
+                    <div class="dropdown-menu" id="jobMenu">
+                        <a class="dropdown-item" value="근로소득자"> 근로소득자 </a>
+                        <a class="dropdown-item" value="사업소득자"> 사업소득자 </a>
+                        <a class="dropdown-item" value="학생/주부/무직"> 학생/주부/무직 </a>
+                    </div>
+                </div>
+                <p></p>
+                <div class="col-5 dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" style="width: 226px;"
+                        id="exp" data-toggle="dropdown" area-haspopup="true" aria-expanded="undefined">
+                        투자경험
+                    </button>
+                    <div class="dropdown-menu" id="expMenu">
+                        <a class="dropdown-item" value="1년 미만"> 1년 미만 </a>
+                        <a class="dropdown-item" value="3년 미만"> 3년 미만 </a>
+                        <a class="dropdown-item" value="10년 미만"> 10년 미만 </a>
+                    </div>
+                </div>
+                <p></p>
+                <div class="col-5 dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" style="width: 226px;"
+                        id="understanding" data-toggle="dropdown" area-haspopup="true" aria-expanded="undefined">
+                        금융상품 이해도
+                    </button>
+                    <div class="dropdown-menu" id="understandingMenu">
+                        <a class="dropdown-item" value="조금 안다"> 조금 안다 </a>
+                        <a class="dropdown-item" value="어느정도 안다"> 어느정도 안다 </a>
+                        <a class="dropdown-item" value="아주 잘 안다"> 아주 잘 안다 </a>
+                    </div>
+                </div>
+                <p></p>
+                <div class="col-5 dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" style="width: 226px;"
+                        id="money" data-toggle="dropdown" area-haspopup="true" aria-expanded="undefined">
+                        투자가능자금
+                    </button>
+                    <div class="dropdown-menu" id="moneyMenu">
+                        <a class="dropdown-item" value="1천만원 이하"> 1천만원 이하 </a>
+                        <a class="dropdown-item" value="5천만원 이하"> 5천만원 이하 </a>
+                        <a class="dropdown-item" value="5천만원 초과"> 5천만원 초과 </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col px-0">
+                <img src="../img/investment.jpg" class="img-responsive" alt="" height="200px;" width="300px;">
+            </div>
+        </div>
+    </div>
+    <blockquote class="blockquote text-center">
+            <p class="mb-0"> </p>
+    </blockquote>
+
+    <!-- Button Content-->
+    <div class="container">
+        <div class="row" style= "width: 80%; margin: 0 auto; ">
+            <div class="col" style= "width: 80%; margin: 0 auto; padding: 20px;">
+                <button type="button" class="btn btn-secondary btn-lg">
+                    <a href="./prototype3.html">이전</a></button>
+            </div>
+            <div class="col-6">
+            </div>
+            <div class="col" style= "width: 80%; margin: 0 auto; padding: 20px;">
+                <button type="button" class="btn btn-lg btn-primary" id = "btnNext">
+                    다음
+                </button>
+            </div>
+        </div>
+    </div>
+<script>
+$( function() {
+    var value_json = {
+        "age" : "",
+        "job" : "",
+        "exp" : "",
+        "understanding" : "",
+        "money" : ""
+    }
+    $("#btnNext").off().on( "click", function() {
+        var val1 = $("#age").html();
+        //alert(val1);
+        //alert(value_json.age);
+        var val2 = $("#job").html();
+        var val3 = $("#exp").html();
+        var val4 = $("#understanding").html();
+        var val5 = $("#money").html();
+        localStorage.setItem("age", value_json.age);
+        localStorage.setItem("job", value_json.job);
+        localStorage.setItem("exp", value_json.exp);
+        localStorage.setItem("understanding", value_json.understanding);
+        localStorage.setItem("money", value_json.money);
+        location.href = "../pages/prototype5.html"
+    })
+
+    // button에 값을 저장하는 부분
+    $("#ageMenu a").off().on( "click", function() {
+        var val1 = $(this).html();
+        $("#age").html(val1);
+        var code = $(this).attr("value");
+        console.log('code:'+code);
+        value_json.age = code;
+    })
+    $("#jobMenu a").off().on( "click", function() {
+        var val1 = $(this).html();
+        $("#job").html(val1);
+        var code = $(this).attr("value");
+        console.log('code:'+code);
+        value_json.job = code;
+    })
+    $("#expMenu a").off().on( "click", function() {
+        var val1 = $(this).html();
+        $("#exp").html(val1);
+        var code = $(this).attr("value");
+        console.log('code:'+code);
+        value_json.exp = code;
+    })
+    $("#understandingMenu a").off().on( "click", function() {
+        var val1 = $(this).html();
+        $("#understanding").html(val1);
+        var code = $(this).attr("value");
+        console.log('code:'+code);
+        value_json.understanding = code;
+    })
+    $("#moneyMenu a").off().on( "click", function() {
+        var val1 = $(this).html();
+        $("#money").html(val1);
+        var code = $(this).attr("value");
+        console.log('code:'+code);
+        value_json.money = code;
+    })
+})
+</script>
+
+</body>
+
+</html>

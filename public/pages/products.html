@@ -1,0 +1,125 @@
+<div class="container-fluid">
+    <br />
+    <!-- Get Products Example -->
+    <div>
+        <div class="row">
+            <H2>1. GET Products</H2>&nbsp;<button type="button" class="btn btn-primary" id="get-products"
+                onclick="Demo.Products.getProducts()">조회 실행</button>
+        </div>
+        <br />
+        <div class="row">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Desc</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">CreatedAt</th>
+                        <th scope="col">UpdatedAt</th>
+                    </tr>
+                </thead>
+                <tbody id="products-list">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Add Products Example -->
+    <br /><br />
+    <div>
+        <div class="row">
+            <H2>2. Add Products</H2>
+
+        </div>
+        <div class="row">
+            <form>
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" class="form-control" id="input-name" placeholder="Enter name">
+                    <small id="name help" class="form-text text-muted">Input name</small>
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <input type="text" class="form-control" id="input-description" placeholder="Enter description">
+                    <small id="description help" class="form-text text-muted">Input description</small>
+                </div>
+                <div class="form-group">
+                    <label>Price</label>
+                    <input type="text" class="form-control" id="input-price" placeholder="Enter price">
+                    <small id="price help" class="form-text text-muted">Input price</small>
+                </div>
+            </form>
+        </div>
+        <div class="row">
+            <div>
+                <button type="button" class="btn btn-primary" id="get-products"
+                    onclick="Demo.Products.addProducts()">Products 추가</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- delete Products Example -->
+    <br /><br />
+    <div>
+        <div class="row">
+            <H2>3. Delete Products</H2>
+
+        </div>
+        <div class="row">
+            <form>
+                <div class="form-group">
+                    <label>id</label>
+                    <input type="text" class="form-control" id="delete-id" placeholder="Enter id">
+                    <small id="id help" class="form-text text-muted">Input id</small>
+                </div>
+            </form>
+        </div>
+        <div class="row">
+            <div>
+                <button type="button" class="btn btn-primary" id="get-products"
+                    onclick="Demo.Products.deleteProducts()">Products 삭제</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- update Products Example -->
+    <br /><br />
+    <div>
+        <div class="row">
+            <H2>4. Update Products</H2>
+        </div>
+        <div class="row">
+            <form>
+                <div class="form-group">
+                    <label>id</label>
+                    <input type="text" class="form-control" id="update-id" placeholder="Enter id">
+                    <small id="id help" class="form-text text-muted">Input id</small>
+                </div>
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" class="form-control" id="update-name" placeholder="Enter name">
+                    <small id="name help" class="form-text text-muted">Input name</small>
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <input type="text" class="form-control" id="update-description" placeholder="Enter description">
+                    <small id="description help" class="form-text text-muted">Input description</small>
+                </div>
+                <div class="form-group">
+                    <label>Price</label>
+                    <input type="text" class="form-control" id="update-price" placeholder="Enter price">
+                    <small id="price help" class="form-text text-muted">Input price</small>
+                </div>
+            </form>
+        </div>
+        <div class="row">
+            <div>
+                <button type="button" class="btn btn-primary" id="get-products"
+                    onclick="Demo.Products.updateProducts()">Products 업데이트</button>
+            </div>
+        </div>
+    </div>
+
+</div>
